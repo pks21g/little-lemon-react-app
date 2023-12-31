@@ -6,7 +6,13 @@
 .App{
   font-size: 2rem;
 }
-
+.card {
+  height: calc(100svh - 70px);
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .btn{
   display: inline-block;
   text-decoration: none;
@@ -110,6 +116,36 @@
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.input-group{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4ce14;
+  padding: 0 10px;
+  border-radius: 20px;
+  
+}
+
+.input-field{
+  width: 100%;
+  padding:10px;
+  margin:15px 0;
+  font-size: 1.2rem;
+  /* position: absolute; */
+  border-radius: 10px;
+  outline: none;
+  border: none;
+
+}
+
+.input-field[type="button"]{
+  display: block;
+  margin-left: 0;
+  padding: 10px 20px;
 }
 
 @media(max-width:900px){

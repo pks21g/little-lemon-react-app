@@ -1,17 +1,27 @@
-import { Fragment } from "react";
 import "./App.css";
-import Nav from "./components/Nav";
-import { BrowserRouter } from "react-router-dom";
-import Hero from "./components/Hero";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/pages/Home";
+import Reservation from "./components/pages/Reservation";
+import About from "./components/About";
+import Nav from "./components/pages/Nav";
+import Menu from "./components/pages/Menu";
+import OrderOnline from "./components/pages/OrderOnline"
+import Login from "./components/pages/Login";
 
 function App() {
   return (
-    <Fragment>
-      <BrowserRouter>
-        <Nav />
-      </BrowserRouter>
-      <Hero />
-    </Fragment>
+    <div>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/order-online" element={<OrderOnline />} />
+        <Route path="/login" element={< Login />} />
+        
+      </Routes>
+    </div>
   );
 }
 
